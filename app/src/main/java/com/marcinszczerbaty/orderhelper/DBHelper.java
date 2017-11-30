@@ -26,14 +26,12 @@ public class DBHelper extends SQLiteOpenHelper {
     public static final String DESCRIPTION = "description";
     public static final String QUANTITY = "quantity";
     public static final String KEY_IMAGE = "image";
-    public static int DATABASE_VERSION = 15;
+    public static int DATABASE_VERSION = 17;
 
     public static final String TABLE_ORD = "ZLECENIA";
     public static final String ID2 = "_id";
-    public static final String ORD_NAME = "order";
+    public static final String ORD_NAME = "ordername";
     public static final String ORD_STATUS = "status";
-    //public static final String PROD_NAME = "products";
-    //public static final String COMP = "company";
 
     public static final String TABLE_PROD_ORD = "PRODZLEC";
     public static final String ID3 = "_id";
@@ -195,7 +193,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
     public Cursor getOrdersToRealise(){
         SQLiteDatabase db = this.getWritableDatabase();
-        String torealise = "TO REALISE";
+        String torealise = "Niezrealizowane";
         Cursor cursor = db.rawQuery("SELECT * FROM " + TABLE_ORD + " WHERE " + ORD_STATUS + " ='" + torealise + "'", null);
         return cursor;
     }
