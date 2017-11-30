@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <SearchView
+        android:id="@+id/inputSearch"
+        android:layout_width="match_parent"
+        android:layout_height="30dp" />
+
+    <ListView
+        android:id="@+id/magEl"
+        android:layout_width="match_parent"
+        android:layout_height="239dp" />
+
+    <TextView
+        android:id="@+id/selected"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Zaznaczone produkty:"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"/>
+
+    <ListView
+        android:id="@+id/selectedProd"
+        android:layout_width="match_parent"
+        android:layout_height="151dp"
+        android:layout_weight="0.74" />
+
+    <Button
+        android:id="@+id/endOrder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="zapisz zlecenie" />
+
+</LinearLayout>

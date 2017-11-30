@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/add_element"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nazwa"
+        android:textSize="24sp" />
+
+    <EditText
+        android:id="@+id/prodName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Opis"
+        android:textSize="24sp" />
+
+    <EditText
+        android:id="@+id/prodDesc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/quantity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ilość"
+        android:textSize="24sp" />
+
+    <EditText
+        android:id="@+id/prodQuant"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number" />
+
+    <ImageView
+        android:id="@+id/prodImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:srcCompat="@mipmap/ic_launcher"
+        android:layout_weight="0.61" />
+
+    <ImageView
+        android:id="@+id/qrcode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:srcCompat="@mipmap/ic_launcher" />
+
+    <Button
+        android:id="@+id/makePhoto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Edytuj zdjęcie" />
+
+    <Button
+        android:id="@+id/addProd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Zapisz edycję" />
+
+    <Button
+        android:id="@+id/delProd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Usuń produkt" />
+</LinearLayout>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/product"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="Wybrany produkt:"
+        android:textColor="@android:color/black"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"/>
+
+    <TextView
+        android:id="@+id/availability"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="Dostępnych w magazynie:"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"/>
+
+    <TextView
+        android:id="@+id/quantity"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"/>
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="Ile w zleceniu?"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"/>
+
+    <EditText
+        android:id="@+id/quantity2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"/>
+
+    <Button
+        android:id="@+id/changeQuant"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Modyfikuj zlecenie"
+        android:textColor="@android:color/black" />
+
+    <Button
+        android:id="@+id/delete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Usuń produkt ze zlecenia" />
+</LinearLayout>

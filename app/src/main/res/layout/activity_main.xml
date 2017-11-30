@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.marcinszczerbaty.orderhelper.MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="350dp"
+        android:layout_height="150dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="22dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/ic_launcher" />
+
+    <Button
+        android:id="@+id/makeOrder"
+        android:layout_width="350dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="22dp"
+        android:text="Utwórz zlecenie"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <Button
+        android:id="@+id/realOrder"
+        android:layout_width="350dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="22dp"
+        android:text="Realizacja zlecenia"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/makeOrder" />
+
+    <Button
+        android:id="@+id/editMag"
+        android:layout_width="350dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="22dp"
+        android:text="dodaj/modyfikuj stany magazynowe"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/realOrder" />
+
+    <Button
+        android:id="@+id/orderHist"
+        android:layout_width="350dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="22dp"
+        android:text="Historia zlecen"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editMag" />
+
+</android.support.constraint.ConstraintLayout>
