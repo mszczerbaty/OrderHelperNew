@@ -7,31 +7,43 @@
     <SearchView
         android:id="@+id/inputSearch"
         android:layout_width="match_parent"
+        android:textColor="@android:color/black"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
         android:layout_height="30dp" />
 
     <ListView
         android:id="@+id/magEl"
         android:layout_width="match_parent"
-        android:layout_height="239dp" />
+        android:textColor="@android:color/black"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_height="235dp" />
 
     <TextView
         android:id="@+id/selected"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Zaznaczone produkty:"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:text=" Zaznaczone produkty:"
         android:textColor="@android:color/black"
-        android:textSize="20sp"/>
+        android:textSize="20sp" />
 
     <ListView
         android:id="@+id/selectedProd"
         android:layout_width="match_parent"
         android:layout_height="151dp"
-        android:layout_weight="0.74" />
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp" />
 
     <Button
         android:id="@+id/endOrder"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="5dp"
         android:text="zapisz zlecenie" />
 
 </LinearLayout>

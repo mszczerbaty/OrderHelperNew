@@ -3,8 +3,20 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Lista zleceń:"
+        android:textColor="@android:color/black"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:textSize="18sp" />
+
     <ListView
         android:id="@+id/orderList"
         android:layout_width="match_parent"
+        android:layout_margin="5dp"
         android:layout_height="match_parent" />
 </LinearLayout>

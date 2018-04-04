@@ -10,6 +10,8 @@
         android:layout_alignParentTop="true"
         android:text="Nazwa zlecenia"
         android:textColor="#040404"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
         android:textSize="20sp" />
 
     <TextView
@@ -21,6 +23,8 @@
         android:layout_toRightOf="@+id/textView4"
         android:text="Status"
         android:textColor="#040404"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
         android:textSize="20sp" />
 
     <ListView
@@ -28,7 +32,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/textView4"
-        android:layout_marginTop="2dp"
+        android:layout_margin="5dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 

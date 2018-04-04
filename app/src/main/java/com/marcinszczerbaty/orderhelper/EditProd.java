@@ -30,7 +30,6 @@ public class EditProd extends AppCompatActivity{
     EditText desc;
     EditText quant;
     ImageView prodImage;
-    ImageView qrimage;
     public static final int REQUEST_CAMERA = 1;
     private int CAMERA_REQUEST = 1;
 
@@ -49,7 +48,6 @@ public class EditProd extends AppCompatActivity{
         desc = (EditText) findViewById(R.id.prodDesc);
         quant = (EditText) findViewById(R.id.prodQuant);
         prodImage = (ImageView) findViewById(R.id.prodImage);
-        qrimage = (ImageView) findViewById(R.id.qrcode);
 
         Bundle extras = getIntent().getExtras();
         String prod = extras.getString("prod");
@@ -64,7 +62,6 @@ public class EditProd extends AppCompatActivity{
         if(!cursor.isClosed()){
             cursor.close();
         }
-
 
         nam.setText(name);
         desc.setText(descr);
@@ -111,8 +108,6 @@ public class EditProd extends AppCompatActivity{
                 startActivity(intent);
             }
         });
-
-
     }
 
     @Override

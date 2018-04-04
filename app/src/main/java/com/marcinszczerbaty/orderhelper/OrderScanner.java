@@ -49,7 +49,6 @@ public class OrderScanner extends AppCompatActivity {
     TextView name;
     TextView desc;
     TextView quant;
-    TextView scanned;
     ImageView picture;
     Button confirm;
     ImageView detected;
@@ -88,7 +87,6 @@ public class OrderScanner extends AppCompatActivity {
         name = (TextView) findViewById(R.id.name2);
         desc = (TextView) findViewById(R.id.desc2);
         quant = (TextView) findViewById(R.id.quant1);
-        scanned = (TextView) findViewById(R.id.scannedID);
         picture = (ImageView) findViewById(R.id.prodImage);
         detected = (ImageView) findViewById(R.id.detected);
         confirm = (Button) findViewById(R.id.confirm);
@@ -162,7 +160,8 @@ public class OrderScanner extends AppCompatActivity {
                                 name.setText(cursor.getString(1));
                                 desc.setText(cursor.getString(cursor.getColumnIndex(DBHelper.DESCRIPTION)));
                                 quant.setText(cursor2.getString(cursor2.getColumnIndex(DBHelper.ORD_QUANTITY)));
-                                picture.setImageBitmap(AddElement.DbBitmapUtility.getImage(cursor.getBlob(cursor.getColumnIndex(DBHelper.KEY_IMAGE))));
+                                picture.setImageBitmap(AddElement.DbBitmapUtility.getImage(cursor.
+                                        getBlob(cursor.getColumnIndex(DBHelper.KEY_IMAGE))));
                             }
                         });
                         confirm.setOnClickListener(new View.OnClickListener() {

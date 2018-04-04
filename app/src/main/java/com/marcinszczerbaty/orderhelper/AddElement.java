@@ -2,8 +2,6 @@ package com.marcinszczerbaty.orderhelper;
 
 import android.Manifest;
 import android.app.Activity;
-import android.content.Context;
-import android.content.ContextWrapper;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
@@ -11,15 +9,11 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
 import android.media.MediaScannerConnection;
-import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
-import android.provider.MediaStore;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.MenuItem;
 import android.widget.EditText;
 import android.view.View;
@@ -38,11 +32,6 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-import static android.R.attr.bitmap;
-import static android.R.attr.content;
-import static android.R.attr.contextClickable;
-import static com.marcinszczerbaty.orderhelper.R.id.imageView;
-
 /**
  * Created by Marcin on 14.09.2017.
  */
@@ -55,9 +44,7 @@ public class AddElement extends AppCompatActivity {
     EditText nam;
     EditText desc;
     EditText quant;
-    ImageView qrcode;
     ImageView prodImage;
-    Uri URI;
     public static final int REQUEST_CAMERA = 1;
     private int CAMERA_REQUEST = 1;
 
@@ -74,7 +61,6 @@ public class AddElement extends AppCompatActivity {
         nam = (EditText) findViewById(R.id.prodName);
         desc = (EditText) findViewById(R.id.prodDesc);
         quant = (EditText) findViewById(R.id.prodQuant);
-        qrcode = (ImageView) findViewById(R.id.qrImage);
         prodImage = (ImageView) findViewById(R.id.prodImage);
 
         addImage.setOnClickListener(new View.OnClickListener() {
@@ -109,7 +95,6 @@ public class AddElement extends AppCompatActivity {
                     } else {
                         Toast.makeText(AddElement.this, "Nie powiodlo sie", Toast.LENGTH_LONG).show();
                     }
-                    //zakodowanie w kodzie QR id produktu
                     Cursor cursor = db.getProductID(nam.getText().toString());
                     String textQr = "";
                     while (cursor.moveToNext()) {
@@ -120,7 +105,6 @@ public class AddElement extends AppCompatActivity {
                         BitMatrix bitMatrix = multiFormatWriter.encode(textQr, BarcodeFormat.QR_CODE, 200, 200);
                         BarcodeEncoder barcodeEncoder = new BarcodeEncoder();
                         Bitmap bitmap2 = barcodeEncoder.createBitmap(bitMatrix);
-                        qrcode.setImageBitmap(bitmap2);
                         String qrtitle = Integer.toString(db.getProductsCount());
                         saveToInternalStorage(bitmap2, qrtitle);
                     } catch (WriterException e) {
@@ -191,13 +175,10 @@ public class AddElement extends AppCompatActivity {
     @NonNull
     private String saveToInternalStorage(Bitmap bitmapImage, String qrtitle){
         File mypath= getOutputMediaFile(qrtitle);
-
         FileOutputStream fos = null;
         try {
             fos = new FileOutputStream(mypath);
-            // Use the compress method on the BitMap object to write image to the OutputStream
             bitmapImage.compress(Bitmap.CompressFormat.PNG, 100, fos);
-
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
@@ -211,13 +192,10 @@ public class AddElement extends AppCompatActivity {
         return mypath.getAbsolutePath();
     }
 
-    //make picture and save to a folder
     private  File getOutputMediaFile(String qrtitle) {
         File mediaStorageDir1 = new File(Environment.getExternalStorageDirectory().toString(),"/QRcodes");
         Toast.makeText(getApplicationContext(),mediaStorageDir1.toString(),Toast.LENGTH_LONG).show();
-        //if this "JCGCamera folder does not exist
         if (!mediaStorageDir1.exists()) {
-            //if you cannot make this folder return
             if (!mediaStorageDir1.mkdirs()) {
                 return null;
             }

@@ -26,7 +26,7 @@ public class DBHelper extends SQLiteOpenHelper {
     public static final String DESCRIPTION = "description";
     public static final String QUANTITY = "quantity";
     public static final String KEY_IMAGE = "image";
-    public static int DATABASE_VERSION = 17;
+    public static int DATABASE_VERSION = 18;
 
     public static final String TABLE_ORD = "ZLECENIA";
     public static final String ID2 = "_id";

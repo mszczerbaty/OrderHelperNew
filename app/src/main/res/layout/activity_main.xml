@@ -6,17 +6,6 @@
     android:layout_height="match_parent"
     tools:context="com.marcinszczerbaty.orderhelper.MainActivity">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="350dp"
-        android:layout_height="150dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginTop="22dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/ic_launcher" />
-
     <Button
         android:id="@+id/makeOrder"
         android:layout_width="350dp"
@@ -25,14 +14,15 @@
         android:text="Utwórz zlecenie"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/editMag"
+        tools:layout_editor_absoluteY="89dp" />
 
     <Button
         android:id="@+id/realOrder"
         android:layout_width="350dp"
         android:layout_height="60dp"
         android:layout_marginTop="22dp"
-        android:text="Realizacja zlecenia"
+        android:text="Realizuj zlecenie"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/makeOrder" />
@@ -41,20 +31,20 @@
         android:id="@+id/editMag"
         android:layout_width="350dp"
         android:layout_height="60dp"
-        android:layout_marginTop="22dp"
-        android:text="dodaj/modyfikuj stany magazynowe"
+        android:layout_marginTop="30dp"
+        android:text="Modyfikuj stany magazynowe"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/realOrder" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/orderHist"
         android:layout_width="350dp"
         android:layout_height="60dp"
         android:layout_marginTop="22dp"
-        android:text="Historia zlecen"
+        android:text="Przegląd zleceń"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editMag" />
+        app:layout_constraintTop_toBottomOf="@+id/realOrder" />
 
 </android.support.constraint.ConstraintLayout>

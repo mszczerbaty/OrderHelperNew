@@ -9,12 +9,17 @@
         android:layout_height="30dp"
         android:text="Wybrany produkt:"
         android:textColor="@android:color/black"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
         android:textSize="24sp" />
 
     <TextView
         android:id="@+id/name"
         android:layout_width="match_parent"
         android:layout_height="30dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
         android:textColor="@android:color/black"
         android:textSize="24sp"/>
 
@@ -22,6 +27,8 @@
         android:id="@+id/availability"
         android:layout_width="match_parent"
         android:layout_height="30dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
         android:text="Dostępnych w magazynie:"
         android:textColor="@android:color/black"
         android:textSize="24sp"/>
@@ -30,6 +37,8 @@
         android:id="@+id/quantity"
         android:layout_width="match_parent"
         android:layout_height="30dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
         android:textColor="@android:color/black"
         android:textSize="24sp"/>
 
@@ -37,6 +46,8 @@
         android:id="@+id/textView5"
         android:layout_width="match_parent"
         android:layout_height="30dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
         android:text="Ile w zleceniu?"
         android:textColor="@android:color/black"
         android:textSize="24sp"/>
@@ -46,6 +57,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
         android:inputType="number"
         android:textColor="@android:color/black"
         android:textSize="24sp"/>
@@ -54,6 +67,8 @@
         android:id="@+id/addQuant"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@android:color/black"
-        android:text="Dodaj do zlecenia" />
+        android:layout_margin="5dp"
+        android:text="Dodaj produkty do zlecenia"
+        android:textColor="@android:color/black" />
+
 </LinearLayout>
